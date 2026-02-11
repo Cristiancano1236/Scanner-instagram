@@ -163,6 +163,23 @@ function App() {
             <span className="badge">JSON / HTML</span>
             <span className="badge">Privacidad: se procesa local</span>
           </div>
+          <div className="ctaRow" aria-label="Acciones principales">
+            <a
+              className="ctaBtn"
+              href="https://youtu.be/IgLNxC98k90"
+              target="_blank"
+              rel="noreferrer"
+              title="Ver tutorial en YouTube"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  fill="currentColor"
+                  d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.5 12 4.5 12 4.5s-5.7 0-7.5.6A3 3 0 0 0 2.4 7.2A31.3 31.3 0 0 0 2 12a31.3 31.3 0 0 0 .4 4.8a3 3 0 0 0 2.1 2.1c1.8.6 7.5.6 7.5.6s5.7 0 7.5-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 22 12a31.3 31.3 0 0 0-.4-4.8ZM10 15.5v-7l6 3.5Z"
+                />
+              </svg>
+              Ver tutorial (YouTube)
+            </a>
+          </div>
       </div>
         <button className="secondary" onClick={resetAll} type="button">
           Limpiar
