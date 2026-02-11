@@ -1,0 +1,355 @@
+#root {
+  width: 100%;
+}
+
+/* Layout simple para la pantalla única de comparación */
+.appShell {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px 16px 56px;
+  box-sizing: border-box;
+}
+
+.header {
+  max-width: 980px;
+  margin: 0 auto 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.header h1 {
+  /* Permite que el título se adapte en pantallas pequeñas sin desbordar. */
+  overflow-wrap: anywhere;
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.brandDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 1), rgba(34, 211, 238, 1));
+  box-shadow: 0 10px 24px rgba(99, 102, 241, 0.25);
+  flex: 0 0 auto;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.badge {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  opacity: 0.85;
+  overflow-wrap: anywhere;
+}
+
+.content {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.24);
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+@media (min-width: 820px) {
+  .grid2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field input[type='file'] {
+  /* Cinturón y tirantes: evita que el borde punteado se salga de la card en móviles. */
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.hint {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+.error {
+  margin: 12px 0 0;
+  color: rgba(255, 180, 180, 0.98);
+}
+
+.ok {
+  margin: 12px 0 0;
+  color: rgba(184, 247, 196, 0.98);
+}
+
+.warnings {
+  margin-top: 12px;
+  border-left: 3px solid rgba(34, 211, 238, 0.35);
+  padding-left: 12px;
+}
+
+.warningsTitle {
+  margin: 0 0 6px;
+  font-weight: 600;
+}
+
+.cardHeaderRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.list {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.listRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.username {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 0.55em 0.9em;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.linkBtn:hover {
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+button.secondary {
+  opacity: 0.9;
+}
+
+.footnote {
+  margin: 12px 0 0;
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
+/* Bloque de ayuda para explicar dónde sacar los JSON */
+.help {
+  margin-top: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.help > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.helpBody {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.helpBody code {
+  overflow-wrap: anywhere;
+}
+
+/* Footer */
+.footer {
+  max-width: 980px;
+  margin: 22px auto 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  gap: 10px;
+}
+
+.footerTop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.footerTitle {
+  font-weight: 600;
+  opacity: 0.92;
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.footerLink {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+  padding: 8px 12px;
+  line-height: 1;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footerLink:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  text-decoration: none;
+}
+
+.footerNote {
+  opacity: 0.72;
+  font-size: 0.95rem;
+  margin: 0;
+  text-align: center;
+}
+
+.footerLegalLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footerLegalLink {
+  font-size: 0.95rem;
+  opacity: 0.88;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footerLegalLink:hover {
+  opacity: 1;
+}
+
+.footerLegalSep {
+  opacity: 0.5;
+}
+
+/* =========================
+   Responsive (mobile-first)
+   ========================= */
+@media (max-width: 700px) {
+  .appShell {
+    padding: 18px 12px 40px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header button.secondary {
+    width: 100%;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .cardHeaderRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cardHeaderRow button {
+    width: 100%;
+  }
+
+  .listRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    justify-content: flex-end;
+  }
+
+  .linkBtn {
+    width: 100%;
+  }
+
+  .footerTop {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footerLinks {
+    gap: 8px;
+  }
+
+  .footerLink {
+    width: fit-content;
+  }
+}
